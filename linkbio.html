@@ -1,0 +1,191 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Hianca Regonha · Links</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap">
+<style>
+:root{
+  --bg:#FFFDF4;
+  --card:#F6F1E3;
+  --card-hover:#EFE7D2;
+  --ink:#111111;
+  --ink-soft:#555048;
+  --line:#111111;
+  color-scheme:light;
+}
+*{box-sizing:border-box}
+html,body{margin:0}
+body{background:var(--bg);color:var(--ink);font-family:"Inter",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration:none}
+a:focus-visible,button:focus-visible{outline:2px solid var(--ink);outline-offset:3px}
+.page{max-width:380px;margin:0 auto;padding:22px 16px 40px;position:relative}
+
+.share{position:absolute;top:14px;right:16px;width:34px;height:34px;border:0;background:transparent;border-radius:50%;display:grid;place-items:center;cursor:pointer;color:var(--ink)}
+.share:hover{background:var(--card)}
+.share svg{width:18px;height:18px}
+.toast{position:fixed;left:50%;bottom:24px;transform:translateX(-50%) translateY(20px);background:var(--ink);color:var(--bg);font-size:13px;padding:9px 16px;border-radius:999px;opacity:0;transition:.25s;pointer-events:none;white-space:nowrap}
+.toast.on{opacity:1;transform:translateX(-50%) translateY(0)}
+
+.profile{display:grid;justify-items:center;text-align:center;padding-top:14px}
+.avatar{width:96px;height:96px;border-radius:50%;object-fit:cover;display:block}
+h1{font-size:20px;font-weight:800;letter-spacing:-.01em;margin:12px 0 4px}
+.loc{display:flex;align-items:center;gap:4px;font-size:8.5px;color:var(--ink-soft)}
+.loc svg{width:9px;height:9px}
+.role{font-size:10px;color:var(--ink-soft);margin-top:6px;letter-spacing:.02em}
+.socials{display:flex;gap:10px;margin-top:10px}
+.socials a{width:22px;height:22px;display:grid;place-items:center;border-radius:6px}
+.socials a:hover{background:var(--card)}
+.socials svg{width:17px;height:17px}
+
+.links{display:grid;gap:10px;margin-top:20px}
+.btn{position:relative;display:grid;grid-template-columns:52px 1fr 22px;align-items:center;gap:6px;min-height:46px;padding:6px 12px 6px 14px;border:1.5px solid var(--line);border-radius:22px;background:var(--card);transition:background .15s,transform .15s;font:inherit;color:inherit;text-align:left;width:100%;cursor:pointer}
+.btn:hover{background:var(--card-hover)}
+.btn:active{transform:scale(.985)}
+.btn .thumb{width:38px;height:38px;border-radius:50%;object-fit:cover;display:block}
+.btn .mark{width:44px;height:38px;display:grid;place-items:center}
+.btn .mark svg{width:24px;height:24px}
+.btn .logo img{max-width:44px;max-height:30px;width:auto;height:auto;display:block}
+.btn .logo{width:48px;height:38px;display:grid;place-items:center;font-size:10px;line-height:1;text-align:center;letter-spacing:-.01em}
+.logo.gocase{font-weight:800;font-size:12px;text-transform:lowercase}
+.logo.aiq{font-weight:800;font-size:11px;color:#C4122F}
+.logo.sp{font-weight:700;font-size:8.5px;text-transform:uppercase;letter-spacing:.02em}
+.btn .txt{text-align:center;line-height:1.25;min-width:0}
+.btn .t{font-size:12px;font-weight:500;display:block}
+.btn .s{font-size:8px;color:var(--ink);display:block;margin-top:1px}
+.btn .dots{width:22px;height:22px;display:grid;place-items:center;color:var(--ink)}
+.btn .dots svg{width:12px;height:12px}
+.btn.big{min-height:60px}
+.btn.plain{grid-template-columns:22px 1fr 22px}
+.btn.plain .mark{width:22px}
+
+h2{font-size:12px;font-weight:700;text-align:center;margin:24px 0 2px;letter-spacing:.01em}
+h2::before{content:"/ "}
+.hint{font-size:8px;color:var(--ink-soft);text-align:center;margin:2px 0 0}
+
+footer{margin-top:28px;text-align:center;font-size:9px;color:var(--ink-soft)}
+footer a{color:var(--ink-soft);border-bottom:1px solid rgba(85,80,72,.35)}
+footer a:hover{border-color:var(--ink-soft)}
+
+@media (min-width:480px){
+  .page{max-width:440px}
+  .btn .t{font-size:13px}.btn .s{font-size:9px}
+}
+</style>
+</head>
+<body>
+<main class="page">
+  <button class="share" type="button" aria-label="Compartilhar esta página" id="share">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="2.6"/><circle cx="6" cy="12" r="2.6"/><circle cx="18" cy="19" r="2.6"/><path d="M8.3 10.7l7.4-4.2M8.3 13.3l7.4 4.2"/></svg>
+  </button>
+
+  <header class="profile">
+    <img class="avatar" src="img/avatar.jpg" alt="Hianca Regonha" width="96" height="96">
+    <h1>Hianca Regonha</h1>
+    <div class="loc">
+      <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a7 7 0 0 0-7 7c0 5.2 7 13 7 13s7-7.8 7-13a7 7 0 0 0-7-7zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5z"/></svg>
+      Tietê, São Paulo
+    </div>
+    <div class="role">Creator · Nutricionista</div>
+    <nav class="socials" aria-label="Redes">
+      <a href="mailto:contato@hianca.com" aria-label="E-mail">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3.5 6l8.5 7 8.5-7"/></svg>
+      </a>
+      <a href="https://www.instagram.com/hiancaregonha/" target="_blank" rel="noopener" aria-label="Instagram">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
+      </a>
+    </nav>
+  </header>
+
+  <section class="links">
+    <a class="btn big" href="https://api.whatsapp.com/send?phone=5519997585039" target="_blank" rel="noopener">
+      <span class="mark"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.2-.4.7-1.4.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.4.1-.7.3-.2.3-.9.9-.9 2.2s.9 2.5 1 2.7c.1.2 1.8 2.8 4.4 3.9 1.6.7 2.3.8 3.1.6.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.2-1.2-.1-.1-.3-.2-.5-.3z"/></svg></span>
+      <span class="txt"><span class="t">MARQUE SUA CONSULTA</span><span class="s">atendimento nutricional pelo WhatsApp</span></span>
+      <span class="dots" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="5" r="2"/><circle cx="12" cy="12" r="2"/><circle cx="12" cy="19" r="2"/></svg></span>
+    </a>
+    <a class="btn big plain" href="index.html" target="_blank" rel="noopener">
+      <span class="mark"></span>
+      <span class="txt"><span class="t">MEDIA KIT | Para marcas</span><span class="s">números, formatos e parcerias</span></span>
+      <span class="dots" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="5" r="2"/><circle cx="12" cy="12" r="2"/><circle cx="12" cy="19" r="2"/></svg></span>
+    </a>
+  </section>
+
+  <h2>MEUS CUPONS</h2>
+  <p class="hint">toque para copiar o cupom</p>
+  <section class="links" style="margin-top:10px">
+    <button class="btn copy" type="button" data-code="HIANCAREGONHA">
+      <span class="logo"><img src="img/logo-gocase.png" alt="Gocase"></span>
+      <span class="txt"><span class="t">Gocase | Garrafas e acessórios</span><span class="s">Cupom: HIANCAREGONHA</span></span>
+      <span class="dots" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="5" r="2"/><circle cx="12" cy="12" r="2"/><circle cx="12" cy="19" r="2"/></svg></span>
+    </button>
+    <button class="btn copy" type="button" data-code="SETEHI">
+      <span class="logo"><img src="img/logo-aiq.png" alt="aiqfome"></span>
+      <span class="txt"><span class="t">aiqfome | Delivery</span><span class="s">Cupom: SETEHI</span></span>
+      <span class="dots" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="5" r="2"/><circle cx="12" cy="12" r="2"/><circle cx="12" cy="19" r="2"/></svg></span>
+    </button>
+    <button class="btn copy" type="button" data-code="HIANCA10">
+      <span class="logo"><img src="img/logo-super.png" alt="Farmácia Super Popular"></span>
+      <span class="txt"><span class="t">Farmácia Super Popular</span><span class="s">Cupom: HIANCA10</span></span>
+      <span class="dots" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="5" r="2"/><circle cx="12" cy="12" r="2"/><circle cx="12" cy="19" r="2"/></svg></span>
+    </button>
+  </section>
+
+  <h2>MEUS FAVS</h2>
+  <section class="links" style="margin-top:10px">
+    <!-- Troque href="#" pelo link de cada produto -->
+    <a class="btn plain" href="#" target="_blank" rel="noopener">
+      <span class="mark"></span>
+      <span class="txt"><span class="t">minha garrafa de treino</span></span>
+      <span class="dots" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="5" r="2"/><circle cx="12" cy="12" r="2"/><circle cx="12" cy="19" r="2"/></svg></span>
+    </a>
+    <a class="btn plain" href="#" target="_blank" rel="noopener">
+      <span class="mark"></span>
+      <span class="txt"><span class="t">minha bolsa do dia a dia</span></span>
+      <span class="dots" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="5" r="2"/><circle cx="12" cy="12" r="2"/><circle cx="12" cy="19" r="2"/></svg></span>
+    </a>
+    <a class="btn plain" href="#" target="_blank" rel="noopener">
+      <span class="mark"></span>
+      <span class="txt"><span class="t">meu tênis de treino</span></span>
+      <span class="dots" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="5" r="2"/><circle cx="12" cy="12" r="2"/><circle cx="12" cy="19" r="2"/></svg></span>
+    </a>
+    <a class="btn plain" href="#" target="_blank" rel="noopener">
+      <span class="mark"></span>
+      <span class="txt"><span class="t">meu whey fav</span></span>
+      <span class="dots" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="5" r="2"/><circle cx="12" cy="12" r="2"/><circle cx="12" cy="19" r="2"/></svg></span>
+    </a>
+  </section>
+
+  <footer>Desenvolvido por <a href="https://www.instagram.com/luuanamendes/" target="_blank" rel="noopener">Luana Mendes</a></footer>
+</main>
+<div class="toast" id="toast" role="status"></div>
+<script>
+const toast = document.getElementById('toast');
+let tTimer;
+function showToast(msg){
+  toast.textContent = msg; toast.classList.add('on');
+  clearTimeout(tTimer); tTimer = setTimeout(() => toast.classList.remove('on'), 1800);
+}
+async function copyText(text){
+  try { await navigator.clipboard.writeText(text); return true; }
+  catch (e) {
+    try {
+      const ta = document.createElement('textarea'); ta.value = text; ta.style.position = 'fixed'; ta.style.opacity = '0';
+      document.body.appendChild(ta); ta.select(); const ok = document.execCommand('copy'); ta.remove(); return ok;
+    } catch (e2) { return false; }
+  }
+}
+document.querySelectorAll('.copy').forEach(b => b.addEventListener('click', async () => {
+  const code = b.dataset.code;
+  showToast(await copyText(code) ? 'Cupom ' + code + ' copiado' : 'Cupom: ' + code);
+}));
+document.getElementById('share').addEventListener('click', async () => {
+  try { if (navigator.share) { await navigator.share({ title: 'Hianca Regonha', url: location.href }); return; } }
+  catch (e) { return; }
+  if (await copyText(location.href)) showToast('Link copiado');
+});
+</script>
+</body>
+</html>
